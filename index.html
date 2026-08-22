@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kairo Shopping</title>
+<title>Shopping Website</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap');
 
@@ -273,7 +273,7 @@ header {
 
 /* ─── HERO ─── */
 .hero {
-  background: var(--ink);
+  background: linear-gradient(135deg, #3D1F3F 0%, #5C2A4D 55%, #7A3A5C 100%);
   color: var(--white);
   padding: 72px 28px 64px;
   text-align: center;
@@ -586,7 +586,7 @@ header {
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header>
   <div class="hdr">
-    <div class="logo" onclick="go('home')">Kairo<sup>store</sup></div>
+    <div class="logo" onclick="go('home')">Shopping<sup>store</sup></div>
     <div class="search">
       <svg class="search-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
         <circle cx="7" cy="7" r="5"/><path d="M11 11l3 3" stroke-linecap="round"/>
@@ -645,9 +645,9 @@ header {
 <div id="pgHome" class="page active">
 
   <div class="hero">
-    <div class="hero-eyebrow">New Season — Summer 2025</div>
-    <h1>Everything you need,<br><em>nothing you don't.</em></h1>
-    <p class="hero-sub">Curated products across tech, fashion, and lifestyle — delivered fast.</p>
+    <div class="hero-eyebrow">Made Simple</div>
+    <h1>Shop smart, <em>live simple.</em></h1>
+    <p class="hero-sub">Good products, fair prices, delivered fast.</p>
     <div class="hero-strip">
       <div class="hero-stat"><strong>12,000+</strong>Products</div>
       <div class="hero-stat"><strong>4.8★</strong>Avg rating</div>
@@ -894,12 +894,10 @@ const PRODUCTS = [
   { id:10, name:'boAt Airdopes 141',         cat:'Electronics', price:1299,  was:2999,  ilu:'earbuds',    rating:4.3, rev:12400,badge:'new',  desc:'True wireless earbuds with BEAST Mode for ultra-low latency. 42 hours total playback and IPX4 water resistance.' },
   { id:11, name:'Adidas Ultraboost 22',      cat:'Footwear',    price:12999, was:15999, ilu:'boots',      rating:4.7, rev:2760, badge:'sale', desc:'Responsive Boost midsole for energy return on every stride. Primeknit+ upper adapts to your foot shape. Made to run.' },
   { id:12, name:'Sheesham Wood Chess Set',   cat:'Sports',      price:1599,  was:2199,  ilu:'chess',      rating:4.6, rev:430,  badge:'new',  desc:'Handcrafted from premium sheesham wood. Felted base, foldable board, and 32 weighted pieces. A classic for every home.' },
-   { id:13, name:'Vivo V30',           cat:'Electrnoic',      price:29999,  was:39999,  ilu:'phone',      rating:3.6, rev:300,  badge:'sale',  desc:'Good camera phone with 5500 MAH battery life long lasting for 1 day , Powerfull enough to win you several chicken dinner if you are capable enough.' },
-  { id:14, name:'Tshirt',   cat:'Fashion',      price:599,  was:1000,  ilu:'Tshirt',      rating:4.6, rev:30,  badge:'new',  desc:'Blue tshirt cotton round neck' },
+  { id:13, name:'Vivo V30', cat:'Electronics', price:29999, was:39999, ilu:'phone', rating:3.6, rev:300, badge:'sale', desc:'Great camera phone with a 5500 mAh battery for all-day use, paired with strong performance for everyday tasks and gaming.' },
   ];
 
-
-const CATS = ['All', ...new Set(PRODUCTS.map(p => p.cat))];
+  const CATS = ['All', ...new Set(PRODUCTS.map(p => p.cat))];
 
 // ── STATE ──
 let S = {
